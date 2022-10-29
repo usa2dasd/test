@@ -1,0 +1,903 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Yooha</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<meta name="title" content="Yooha">
+		<meta name="description" content="WoWonder v3.0.2 is a Social Networking Platform. With our new feature, user can wonder posts, photos,">
+		<meta name="keywords" content="social, wowonder, social site">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<link rel="apple-touch-icon" href="assets/img/icon.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="Yooha">
+		
+				<meta name="pinterest-rich-pin" content="false" />
+															<meta property="og:title" content="Yooha" />
+			<meta property="og:type" content="article" />
+			<meta property="og:image" content="assets/img/icon.png" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+		<link rel="shortcut icon" type="image/png" href="assets/img/icon.png"/>
+		<link rel="stylesheet" href="assets/css/general-style-plugins.css">
+		
+		    
+					<link rel="stylesheet" href="assets/css/welcome.css">
+							
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	  
+		    
+		
+		<script src="assets/js/jquery-3.1.1.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+
+					<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+			<script src="assets/js/bootstrap-select.min.js"></script>
+		
+		
+		      
+			  
+					<script src="assets/js/artplayer.js"></script>
+				
+		<script src="assets/js/wavesurfer.min.js"></script>
+		<script src="assets/js/wavesurfer.min.js"></script>
+	  
+				
+		<style>/* 
+
+Add here your custom css styles Example: p { text-align: center; color: red; } 
+
+*/</style>
+		
+				<script src="assets/js/html2pdf.bundle.js"></script>
+		<script src="assets/js/qrcode.js"></script>
+		
+		<script type="text/javascript">
+			/* 
+Add here your JavaScript Code. 
+Note. the code entered here will be added in <head> tag 
+
+
+	Example: 
+
+	var x, y, z; 
+	x = 5; 
+	y = 6; 
+	z = x + y;
+
+*/			function Wo_Ajax_Requests_File(){
+				return 
+			}
+						function RunLiveAgora(channelName,DIV_ID,token) {
+				var agoraAppId = '87fac826da394669845cb06ed4b23ebd'; 
+				var token = token;
+
+				var client = AgoraRTC.createClient({mode: 'live', codec: 'vp8'}); 
+				client.init(agoraAppId, function () {
+
+				client.setClientRole('audience', function() {
+				}, function(e) {
+				});
+    
+				client.join(token, channelName, 508206, function(uid) {
+				}, function(err) {
+				});
+				}, function (err) {
+				});
+
+				client.on('stream-added', function (evt) {
+					var stream = evt.stream;
+					var streamId = stream.getId();
+		
+					client.subscribe(stream, function (err) {
+					});
+				});
+				client.on('stream-subscribed', function (evt) {
+					var remoteStream = evt.stream;
+					remoteStream.play(DIV_ID);
+					$('#player_'+remoteStream.getId()).addClass('embed-responsive-item');
+				});
+			}
+		</script>
+		      
+		<style>
+
+
+:root {
+	--body-bg: #f9f9f9;
+	--header-background: #ffffff;
+	--header-color: #6436a0;
+	--header-hover-color: #333333;
+	--header-search-color: rgba(191,191,191,0.44);
+	--main: #512989;
+	--main-hover: #5b359d;
+	--main-color: #ffffff;
+	--main-hover-color: #481581;
+	--chat-outgoing: #fff9f9;
+	--plyr-color-main: #512989;
+	--plyr-control-toggle-checked-background: transparent;
+	--plyr-video-control-background-hover: rgba(255, 255, 255, 0.2);
+	--plyr-range-fill-background: #fff;
+	--plyr-range-track-height: 3px;
+}
+
+.reaction-2::after {content: "Love";}
+.reaction-3::after {content: "HaHa";}
+.reaction-4::after {content: "WoW";}
+.reaction-5::after {content: "Sad";}
+.reaction-6::after {content: "Angry";}
+</style>
+				
+					<meta name="google-signin-scope" content="profile email">
+			<meta name="google-signin-client_id" content="">
+			<script src="assets/js/platform.js" async defer></script>
+				
+				
+				
+		<script crossorigin="anonymous" src="assets/js/sdk.js"></script>
+		
+		<script src="assets/js/socket.io.js"></script>
+	
+		<script src="assets/js/jquery.adaptive-backgrounds.js"></script>
+		
+		<script>
+		let nodejs_system = "0";
+      let socket = null
+      let groupChatListener = {}
+      $(()=>{
+              });
+      </script>
+	  			<script src="assets/js/bootstrap-tagsinput.js"></script>
+      	  
+			
+		<script src="assets/js/flickity.pkgd.min.js"></script>
+		
+				<link rel="stylesheet" href="assets/css/green-audio-player.css" />
+		<script src="assets/js/green-audio-player.js"></script>
+	</head>
+   
+	<body  class="tag_header_top_p">
+		<input type="hidden" id="get_no_posts_name" value="No more posts">
+				
+		<input type="hidden" class="seen_stories_users_ids" value="">
+		<input type="hidden" class="main_session" value="4847141f1ba0f8601c37">
+		
+				
+		<div id="ajax_loading" class="tag_content tag_header_top_m">
+			<div class="ad-placement-header-footer">
+							</div>
+			<div id="contnet">
+	
+<script>window.addEventListener('resize', () => {let vh = window.innerHeight * 0.01;document.documentElement.style.setProperty('--vh', `${vh}px`);});</script>
+<div class="container-v5">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form id="login" method="post" class="sign-in-form form-class">
+              <a class="logo" href="https://yooha.ru"><img src="assets/img/icon.png" alt="Logo"> </a>
+			<h2 class="title">Welcome!</h2>
+			<div class="valign tag_auth_animation d-none log_in_auth"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367.805 367.805" xml:space="preserve"> <g> <path style="fill:#5b158c;" d="M183.903,0.001c101.566,0,183.902,82.336,183.902,183.902s-82.336,183.902-183.902,183.902 S0.001,285.469,0.001,183.903l0,0C-0.288,82.625,81.579,0.29,182.856,0.001C183.205,0,183.554,0,183.903,0.001z"/> <polygon style="fill:#fff;" points="285.78,133.225 155.168,263.837 82.025,191.217 111.805,161.96 155.168,204.801 256.001,103.968"/> </g></svg>Welcome!</h2></div>	            
+			<div class="errors"></div>
+						<div class="tag_pro_users">
+				<div><a class="user" href="https://yooha.ru/1a67c6140e" title="1a67c6140e"><img alt="1a67c6140e" src="https://yooha.ru/upload/photos/f-avatar.jpg?cache=0"></a></div><div><a class="user" href="https://yooha.ru/demo123" title="demo123"><img alt="demo123" src="https://yooha.ru/upload/photos/f-avatar.jpg?cache=0"></a></div><div><a class="user" href="https://yooha.ru/snbddhhd" title="snbddhhd"><img alt="snbddhhd" src="https://yooha.ru/upload/photos/f-avatar.jpg?cache=0"></a></div><div><a class="user" href="https://yooha.ru/paksocialwork" title="Hello World"><img alt="Hello World" src="https://yooha.ru/upload/photos/2022/06/vDauUPjyDnnLLPPaBemG_23_a066ae650a700427286c82ed63e167bd_avatar.jpg?cache=0"></a></div><div><a class="user" href="https://yooha.ru/shiningbright" title="Shining Bright"><img alt="Shining Bright" src="https://yooha.ru/upload/photos/2022/10/kL8Dq2gokue7uGrPwRrW_25_250f5ac8626664eaac099da108ef90d4_avatar.png?cache=0"></a></div><div><a class="user" href="https://yooha.ru/Rao1992" title="Rao Bahadur"><img alt="Rao Bahadur" src="https://yooha.ru/upload/photos/2022/09/KvmbyhKyVxQ8yIZKebTk_09_8202e3c6f0d81995451723cd3d98a137_avatar.jpg?cache=0"></a></div><div><a class="user" href="https://yooha.ru/zxc1234" title="zxc1234"><img alt="zxc1234" src="https://yooha.ru/upload/photos/f-avatar.jpg?cache=0"></a></div><div><a class="user" href="https://yooha.ru/dgdfgfdgdfg" title="dgdfgfdgdfg"><img alt="dgdfgfdgdfg" src="https://yooha.ru/upload/photos/f-avatar.jpg?cache=0"></a></div>			</div>
+			            <div class="input-field">
+              <i><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="currentColor" d="M256 256c52.805 0 96-43.201 96-96s-43.195-96-96-96-96 43.201-96 96 43.195 96 96 96zm0 48c-63.598 0-192 32.402-192 96v48h384v-48c0-63.598-128.402-96-192-96z"/></svg></i>
+              <input name="username" type="text" autocomplete="off" class="inputclass-wel" autofocus required placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path fill="currentColor" d="M17,9V7c0-2.8-2.2-5-5-5S7,4.2,7,7v2c-1.7,0-3,1.3-3,3v7c0,1.7,1.3,3,3,3h10c1.7,0,3-1.3,3-3v-7C20,10.3,18.7,9,17,9z M9,7c0-1.7,1.3-3,3-3s3,1.3,3,3v2H9V7z"/></svg></svg></i>
+              <input name="password" type="password" autocomplete="off" class="inputclass-wel" autofocus required placeholder="Password" />
+            </div>
+										<div class="round-check">
+								<input type="checkbox" name="remember_device" id="remember_device" checked>
+								<label for="remember_device">
+									Remember this device								</label>
+								<div class="clear"></div>
+							</div>
+						<label class="tag_field tag_wel_forgot label-class-welcome">
+				<a href="https://yooha.ru/forgot-password" title="Forgot Password?" class="a-svg-forget" data-toggle="tooltip"><svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 0 24 24" width="22"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92c-.5.51-.86.97-1.04 1.69-.08.32-.13.68-.13 1.14h-2v-.5c0-.46.08-.9.22-1.31.2-.58.53-1.1.95-1.52l1.24-1.26c.46-.44.68-1.1.55-1.8-.13-.72-.69-1.33-1.39-1.53-1.11-.31-2.14.32-2.47 1.27-.12.37-.43.65-.82.65h-.3C8.4 9 8 8.44 8.16 7.88c.43-1.47 1.68-2.59 3.23-2.83 1.52-.24 2.97.55 3.87 1.8 1.18 1.63.83 3.38-.19 4.4z"/></svg>
+				<span>Forgot Password?</span></a>
+			</label>
+            <input type="submit" value="Login" id="login" class="btn solid disable_btn btn-welcome tag_wel_btn" />
+			            <p class="social-text">OR</p>
+            <div class="social-media">
+                  			              </div>
+											<div class="row_app">
+													<div class="tag_wel_widget_app">
+																	<a href="2423534" target="_blank">
+									</a>
+																									<a href="5346436" target="_blank">
+									</a>
+															</div>
+																	</div>
+			          </form>
+		  <form id="register" method="post" class="sign-up-form form-class">
+			<h2 class="title">Sign up</h2>
+			  <div class="valign tag_auth_animation d-none register_auth"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367.805 367.805" xml:space="preserve"> <g> <path style="fill:#3BB54A;" d="M183.903,0.001c101.566,0,183.902,82.336,183.902,183.902s-82.336,183.902-183.902,183.902 S0.001,285.469,0.001,183.903l0,0C-0.288,82.625,81.579,0.29,182.856,0.001C183.205,0,183.554,0,183.903,0.001z"/> <polygon style="fill:#fff;" points="285.78,133.225 155.168,263.837 82.025,191.217 111.805,161.96 155.168,204.801 256.001,103.968"/> </g></svg>Welcome!</div>
+				<div class="errors_2"></div>
+				
+										
+				
+				
+			  <div class="input-field input-field_reg">
+				<i><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="currentColor" d="M256 256c52.805 0 96-43.201 96-96s-43.195-96-96-96-96 43.201-96 96 43.195 96 96 96zm0 48c-63.598 0-192 32.402-192 96v48h384v-48c0-63.598-128.402-96-192-96z"/></svg></i>
+				<input name="username" type="text" autocomplete="off" class="inputclass-wel" placeholder="Username" autofocus required>
+			  </div>
+			  			  <div class="input-field input-field_reg">
+				<i><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="currentColor"  d="M40 8h-32c-2.21 0-3.98 1.79-3.98 4l-.02 24c0 2.21 1.79 4 4 4h32c2.21 0 4-1.79 4-4v-24c0-2.21-1.79-4-4-4zm0 8l-16 10-16-10v-4l16 10 16-10v4z"/><path fill="none" d="M0 0h48v48h-48z"/></svg></i>
+				<input name="email" type="email" autocomplete="off" class="inputclass-wel" placeholder="E-mail" required>
+			  </div>
+			  			  <div class="input-field input-field_reg">
+				<i><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path fill="currentColor" d="M17,9V7c0-2.8-2.2-5-5-5S7,4.2,7,7v2c-1.7,0-3,1.3-3,3v7c0,1.7,1.3,3,3,3h10c1.7,0,3-1.3,3-3v-7C20,10.3,18.7,9,17,9z M9,7c0-1.7,1.3-3,3-3s3,1.3,3,3v2H9V7z"/></svg></svg></i>
+				<input name="password" type="password" id="password" class="inputclass-wel" autocomplete="off" placeholder="Password" required>
+			  </div>
+			  			  <div class="input-field input-field_reg">
+				<i><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path fill="currentColor" d="M17,9V7c0-2.8-2.2-5-5-5S7,4.2,7,7v2c-1.7,0-3,1.3-3,3v7c0,1.7,1.3,3,3,3h10c1.7,0,3-1.3,3-3v-7C20,10.3,18.7,9,17,9z M9,7c0-1.7,1.3-3,3-3s3,1.3,3,3v2H9V7z"/></svg></svg></i>
+				<input name="confirm_password" type="password" class="inputclass-wel" autocomplete="off" placeholder="Confirm Password" required>
+			  </div>
+			  		    <div class="input-field input-field_reg">
+			<i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-gender-male-female" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17.58,4H14V2H21V9H19V5.41L15.17,9.24C15.69,10.03 16,11 16,12C16,14.42 14.28,16.44 12,16.9V19H14V21H12V23H10V21H8V19H10V16.9C7.72,16.44 6,14.42 6,12A5,5 0 0,1 11,7C12,7 12.96,7.3 13.75,7.83L17.58,4M11,9A3,3 0 0,0 8,12A3,3 0 0,0 11,15A3,3 0 0,0 14,12A3,3 0 0,0 11,9Z" /></svg></i>
+			<select name="gender" id="gender">
+									<option value="female">Female</option>
+									<option value="male">Male</option>
+							</select>
+			</div>
+									<div class="form-group1 form-check1">
+				<input type="checkbox" class="form-check-input" name="accept_terms" id="accept_terms" onchange="activateButton(this)">
+				<label class="form-check-label label-class-welcome" for="accept_terms">By creating your account, you agree to our <a href="https://yooha.ru/terms/terms">Terms of Use</a> & <a href="https://yooha.ru/terms/privacy-policy">Privacy Policy</a></label>
+			</div>
+		    <input type="submit" value="Let&#039;s Go !" id="sign_submit" class="btn solid disable_btn tag_wel_btn btn-welcome" disabled />	  
+         </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Connect with your family and friends and share your moments.</h3>
+            <button class="btn transparent btn-welcome" id="sign-up-btn" id="sign-up-btn">
+              Register            </button>
+          </div>
+          <img src="https://yooha.ru/themes/wondertag/img/log.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Share what&#039;s new and life moments with your friends.</h3>
+            <button class="btn transparent btn-welcome" id="sign-in-btn">
+              Login            </button>
+          </div>
+          <img src="https://yooha.ru/themes/wondertag/img/register.svg" class="image" alt="" />
+        </div>
+      </div>
+	  <div class="tag_wel_bottommm">
+		<div class="container">
+	<div class="welcome-footer">
+		© 2022 Yooha <span class="middot">·</span>
+		<a data-ajax="?link1=terms&type=terms" href="https://yooha.ru/terms/terms">Terms of Use</a> <span class="middot">·</span>
+		<a data-ajax="?link1=terms&type=privacy-policy" href="https://yooha.ru/terms/privacy-policy">Privacy Policy</a> <span class="middot">·</span>
+		<a data-ajax="?link1=contact-us" href="https://yooha.ru/contact-us">Contact Us</a> <span class="middot">·</span>
+		<a data-ajax="?link1=terms&type=about-us" href="https://yooha.ru/terms/about-us">About</a>
+					<span class="middot">·</span> <a href="https://yooha.ru/blogs">Blog</a>
+	</div>
+</div>	</div>
+</div>
+<script>
+(function($) {
+	$.fn.visible = function(partial) {
+		var $t            = $(this),
+          $w            = $(window),
+          viewTop       = $w.scrollTop(),
+          viewBottom    = viewTop + $w.height(),
+          _top          = $t.offset().top,
+          _bottom       = _top + $t.height(),
+          compareTop    = partial === true ? _bottom : _top,
+          compareBottom = partial === true ? _top : _bottom;
+		return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+	};
+})(jQuery);
+
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
+
+	
+var win = $(window);
+var allTrends = $(".tag_stup_trend");
+
+allTrends.each(function(i, el) {
+	var el = $(el);
+	if (el.visible(true)) {
+		el.addClass("already-visible"); 
+	} 
+});
+
+win.scroll(function(event) {
+	allTrends.each(function(i, el) {
+		var el = $(el);
+		if (el.visible(true)) {
+			el.addClass("come-in"); 
+		} 
+	});
+});
+
+$(function() {
+var working = false;
+var $this = $('#login');
+var $state = $this.find('.errors');
+var $login_anim = $('.log_in_auth');
+      $('#login').ajaxForm({
+        url: Wo_Ajax_Requests_File() + '?f=login',
+        beforeSend: function() {
+			$('.errors').addClass('errors-sty');
+    		working = true;
+    		$this.find('.disable_btn').attr("disabled", true);
+        },
+        success: function(data) {
+          if (data.status == 200 || data.status == 600) {
+          	$login_anim.removeClass('d-none');
+            setTimeout(function () {
+            	window.location.href = data.location;
+            }, 1000);
+          } else {
+            var errors = data.errors.join("<br>");
+            $state.html(errors);
+          } 
+          working = false;
+    	  $this.find('.disable_btn').attr("disabled", false);
+        }
+      });
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container-v5");
+    sign_up_btn.addEventListener("click", () => {
+      container.classList.add("sign-up-mode");
+    });
+    sign_in_btn.addEventListener("click", () => {
+      container.classList.remove("sign-up-mode");
+    });
+      
+});
+function signOut() {
+	var auth2 = gapi.auth2.getAuthInstance();
+	auth2.signOut().then(function () {
+	  console.log('User signed out.');
+	});
+}
+
+function onSignIn(googleUser) {
+    // The ID token you need to pass to your backend:
+    var id_token = googleUser.getAuthResponse().id_token;
+    $.post(Wo_Ajax_Requests_File() + '?f=google_login', {id_token: id_token}, function(data, textStatus, xhr) {
+    	if (data.status == 200) {
+    		signOut();
+	        window.location.href = data.location;
+    	}
+    	else{
+		$this.find('.disable_btn').attr("disabled", false);
+	        $state.html(data.message);
+    	}
+    });
+}
+
+function activateButton(element) {
+	if(element.checked) {
+		document.getElementById("sign_submit").disabled = false;
+	}
+	else  {
+		document.getElementById("sign_submit").disabled = true;
+	}
+};
+
+var working_s = false;
+var $this_s = $('#register');
+var $state_s = $this_s.find('.errors_2');
+var $login_anim_s = $('.register_auth');
+
+$(function() {
+	$this_s.ajaxForm({
+		url: Wo_Ajax_Requests_File() + '?f=register',
+		beforeSend: function() {
+					$('.errors_2').addClass('errors-sty errors');
+										working_s = true;
+					$this_s.find('button').attr("disabled", true);
+										working_s = true;
+					$this_s.find('button').attr("disabled", true);
+				},
+				success: function(data) {
+			if (data.status == 200) {
+				$login_anim_s.removeClass('d-none');
+				setTimeout(function () {
+					window.location.href = data.location + '/?cash='+Math.random();
+				}, 1000);
+			} else if (data.status == 300) {
+				window.location.href = data.location + '/?cash='+Math.random();
+			} else {
+				$this_s.find('button').attr("disabled", false);
+				$state_s.html(data.errors);
+			} 
+			working_s = false;
+		}
+	});
+});
+
+</script></div>
+			<div class="ad-placement-header-footer">
+							</div>
+		</div>
+		
+				
+		
+		<div class="modal fade image-modal" id="modal_light_box" role="dialog">
+	<div class="valign tag_lbox_toolbar"><div class="btn btn-mat close-lightbox" data-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"></path></svg></div></div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<img class="image">
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="views-info-modal" role="dialog">
+	<div class="modal-dialog wow_mat_mdl modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title"><span id="views_info_title"></span></h4>
+			</div>
+			<div class="modal-body">
+				<div id="views_info" class="wo_react_ursrs_list"></div>
+				<div class="clearfix"></div>
+				<div id="views_info_load" style="display: none;">
+					<div class="load-more views_info_load_ wo_react_ursrs_list_lod_mor">
+						<button class="btn btn-default text-center views_info_load_more" data-type="" post-id="" table-type="" onclick="Wo_LoadViewsInfo(this);"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path></svg></span> <span class="no_load_more_btn_span" id="load_more_info_btn">Load more</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="users-reacted-modal" role="dialog">
+	<div class="modal-dialog wow_mat_mdl modal-md">
+		<div class="modal-content">
+			<div class="valign mb-15 who_react_modal">
+									<span class="tag_check_who_how_react how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(2);$('.tag_check_who_how_react').removeClass('active');$(this).addClass('active');">
+													<div class="inline_post_emoji inline_act_emoji no_anim"><div class="emoji emoji--love"><div class="emoji__heart"></div></div></div>
+											</span>
+									<span class="tag_check_who_how_react how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(3);$('.tag_check_who_how_react').removeClass('active');$(this).addClass('active');">
+													<div class="inline_post_emoji inline_act_emoji no_anim"><div class="emoji emoji--haha"><div class="emoji__face"><div class="emoji__eyes"></div><div class="emoji__mouth"><div class="emoji__tongue"></div></div></div></div></div>
+											</span>
+									<span class="tag_check_who_how_react how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(4);$('.tag_check_who_how_react').removeClass('active');$(this).addClass('active');">
+													<div class="inline_post_emoji inline_act_emoji no_anim"><div class="emoji emoji--wow"><div class="emoji__face"><div class="emoji__eyebrows"></div><div class="emoji__eyes"></div><div class="emoji__mouth"></div></div></div></div>
+											</span>
+									<span class="tag_check_who_how_react how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(5);$('.tag_check_who_how_react').removeClass('active');$(this).addClass('active');">
+													<div class="inline_post_emoji inline_act_emoji no_anim"><div class="emoji emoji--sad"><div class="emoji__face"><div class="emoji__eyebrows"></div><div class="emoji__eyes"></div><div class="emoji__mouth"></div></div></div></div>
+											</span>
+									<span class="tag_check_who_how_react how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(6);$('.tag_check_who_how_react').removeClass('active');$(this).addClass('active');">
+													<div class="inline_post_emoji inline_act_emoji no_anim"><div class="emoji emoji--angry"><div class="emoji__face"><div class="emoji__eyebrows"></div><div class="emoji__eyes"></div><div class="emoji__mouth"></div></div></div></div>
+											</span>
+							</div>
+			<div class="modal-body">
+				<div id="reacted_users_box" class="wo_react_ursrs_list"></div>
+				<div class="clearfix"></div>
+				<div id="reacted_users_load" style="display: none;">
+					<div class="load-more wo_react_ursrs_list_lod_mor">
+						<button class="btn btn-default text-center reacted_users_load_more" data-type="" post-id="" col-type="" onclick="Wo_LoadMoreReactedUsers(this);"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path></svg></span> <span class="no_load_more_btn_span" id="load_more_reacted_btn">Load more</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="error_post" role="dialog">
+    <div class="modal-dialog wow_mat_mdl">
+		<div class="modal-content">
+			<p class="text-center" id="error_post_text"></p>
+		</div>
+    </div>
+</div>
+
+<div class="modal fade" id="edit-offer-modal" role="dialog">
+	<div class="modal-dialog wow_mat_mdl">
+		<div class="modal-content">
+            <div class="modal-header">
+				<h4 class="modal-title">Edit Offer</h4>
+            </div>
+			<form class="edit-offer-form form-horizontal" method="post">
+				<div class="modal-body tag_field_full_margin">
+					<div class="app-offer-alert app-general-alert"></div>
+					<div class="clear"></div>
+					<div class="edit_offer_modal_form"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-mat disable_btn" data-dismiss="modal" aria-label="Close">Cancel</button>
+					<button type="submit" class="btn btn-main btn-mat disable_btn">Update</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal fade" id="add_tier_modal" role="dialog" data-keyboard="false" style="overflow-y: auto;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+        <h4 class="modal-title">Add tier</h4>
+      </div>
+      <form class="form form-horizontal tier_form" method="post" action="#">
+        <div class="modal-body twocheckout_modal">
+          <div class="modal_add_tier_modal_alert"></div>
+          <div class="clear"></div>
+          <div class="sun_input col-md-6">
+            <input name="title" type="text" class="form-control input-md" autocomplete="off" placeholder="Tier title">
+            <label class="plr15">Tier title</label>  
+          </div>
+          <div class="sun_input col-md-6">
+            <input name="price" type="number" class="form-control input-md" autocomplete="off" placeholder="Tier price">
+            <label class="plr15">Tier price</label>  
+          </div>
+          <div class=" col-lg-12">
+            <label class="plr15">Benefits</label>
+            <br>
+            <input type="checkbox" name="benefits[]" value="chat" onclick="ShowBenefitsChat(this)">
+            <label>Chat</label><br>
+            <div class="add_benefits_chat" style="display: none;">
+              <input type="radio" id="benefits_chat_1" name="chat" value="chat_without_audio_video">
+              <label for="benefits_chat_1">Chat without audio and video call</label><br>
+              <input type="radio" id="benefits_chat_2" name="chat" value="chat_with_audio_without_video">
+              <label for="benefits_chat_2">Chat with audio call and without video call</label><br>  
+              <input type="radio" id="benefits_chat_3" name="chat" value="chat_without_audio_with_video">
+              <label for="benefits_chat_3">Chat without audio call and with video call</label><br>  
+              <input type="radio" id="benefits_chat_4" name="chat" value="chat_with_audio_video">
+              <label for="benefits_chat_4">Chat with audio and video call</label><br>
+            </div>
+            <input type="checkbox" name="benefits[]" value="live_stream">
+            <label>Live Stream</label><br>
+          </div>
+          <div class="sun_input col-md-12">
+            <textarea class="form-control input-md" placeholder="Tier description" name="description"></textarea>
+            <label class="plr15">Tier description</label>  
+          </div>
+          <div class="clear"></div>
+          <div class="form-group col-lg-12">
+            <label class="col-md-12">Tier image:</label>  
+            <div class="col-md-12">
+              <div class="select_ev_covr" id="select_tier_image">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5,3A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H14.09C14.03,20.67 14,20.34 14,20C14,19.32 14.12,18.64 14.35,18H5L8.5,13.5L11,16.5L14.5,12L16.73,14.97C17.7,14.34 18.84,14 20,14C20.34,14 20.67,14.03 21,14.09V5C21,3.89 20.1,3 19,3H5M19,16V19H16V21H19V24H21V21H24V19H21V16H19Z" /></svg>
+                Select an image    
+              </div>
+            </div>
+          </div>
+        </div>
+        <input type="file" name="image" class="hidden" id="tier_image">
+        <div class="clear"></div>
+        <div class="modal-footer">
+          <div class="ball-pulse"><div></div><div></div><div></div></div>
+          <button type="submit" class="btn btn-main btn-mat">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="delete-tier" tabindex="-1" role="dialog" aria-labelledby="delete-tier" aria-hidden="true" data-id="0">
+  <div class="modal-dialog mat_box" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"> Delete your tier</h5>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this tier?      </div>  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger btn-mat" data-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="show_product_reviews_modal" role="dialog">
+	<div class="modal-dialog wow_mat_mdl">
+		<div class="modal-content check_reviews">
+			<div class="modal-header">
+				<h4 class="modal-title">Reviews</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+			</div>
+			<div class="modal-body">
+				<div id="show_product_reviews_modal_info" class="wo_react_ursrs_list"></div>
+				<div class="clearfix"></div>
+				<div id="show_product_reviews_modal_info_load" style="display: none;">
+					<div class="load-more">
+						<button class="btn btn-default text-center pointer" data-type="" post-id="" table-type="" onclick="Wo_LoadReviews();"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path></svg></span> <p class="m-0 d-inline" id="show_product_reviews_load_text">Load more</p></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+    
+				
+					<script type="text/javascript" src="assets/js/welcome.js"></script>
+				
+					<script type="text/javascript">const node_socket_flow = "0"</script>
+				
+		<script type="text/javascript" src="assets/js/script.js"></script>
+		
+				
+				
+		<div class="extra-css"></div>
+		
+				
+		<script type="text/javascript">
+  (function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function ($) {
+  $.timeago = function(timestamp) {
+    if (timestamp instanceof Date) {
+      return inWords(timestamp);
+    } else if (typeof timestamp === "string") {
+      return inWords($.timeago.parse(timestamp));
+    } else if (typeof timestamp === "number") {
+      return inWords(new Date(timestamp));
+    } else {
+      return inWords($.timeago.datetime(timestamp));
+    }
+  };
+  var $t = $.timeago;
+
+  $.extend($.timeago, {
+    settings: {
+      refreshMillis: 60000,
+      allowPast: true,
+      allowFuture: false,
+      localeTitle: false,
+      cutoff: 0,
+      strings: {
+        prefixAgo: null,
+        prefixFromNow: null,
+        suffixAgo: "ago",
+        suffixFromNow: "from now",
+        inPast: "any moment now",
+        seconds: "now",
+        minute: "minute",
+        minutes: "minutes",
+        hour: "hour",
+        hours: "hours",
+        day: "day",
+        days: "days",
+        month: "month",
+        months: "months",
+        year: "year",
+        years: "years",
+        wordSeparator: " ",
+        numbers: []
+      }
+    },
+
+    inWords: function(distanceMillis) {
+      if(!this.settings.allowPast && ! this.settings.allowFuture) {
+          throw 'timeago allowPast and allowFuture settings can not both be set to false.';
+      }
+
+      var $l = this.settings.strings;
+      var prefix = $l.prefixAgo;
+      var suffix = $l.suffixAgo;
+      if (this.settings.allowFuture) {
+        if (distanceMillis < 0) {
+          prefix = $l.prefixFromNow;
+          suffix = $l.suffixFromNow;
+        }
+      }
+
+      if(!this.settings.allowPast && distanceMillis >= 0) {
+        return this.settings.strings.inPast;
+      }
+
+      var seconds = Math.abs(distanceMillis) / 1000;
+      var minutes = seconds / 60;
+      var hours = minutes / 60;
+      var days = hours / 24;
+      var weeks = days / 7;
+      var years = days / 365;
+
+      function substitute(stringOrFunction, number) {
+        var string = $.isFunction(stringOrFunction) ? stringOrFunction(number, distanceMillis) : stringOrFunction;
+        var value = ($l.numbers && $l.numbers[number]) || number;
+        return number+' '+string.replace(/%d/i, value);
+        //return string.replace(/%d/i, value);
+      }
+
+        // var words = seconds < 45 && substitute($l.seconds, '') ||
+        // seconds < 90 && substitute('m', 1) ||
+        // minutes < 45 && substitute('m', Math.round(minutes)) ||
+        // minutes < 90 && substitute('h', 1) ||
+        // hours < 24 && substitute('hrs', Math.round(hours)) ||
+        // hours < 42 && substitute('d', 1) ||
+        // days < 7 && substitute('d', Math.round(days)) ||
+        // weeks < 2 && substitute('w', 1) ||
+        // weeks < 52 && substitute('w', Math.round(weeks)) ||
+        // years < 1.5 && substitute('y', 1) ||
+        // substitute('yrs', Math.round(years));
+        var words = '';
+        if (seconds < 45) {
+            words = substitute($l.seconds, '');
+        }
+        else if (seconds < 90) {
+            words = substitute('m', 1);
+        }
+        else if (minutes < 45) {
+            words = substitute('m', Math.round(minutes));
+        }
+        else if (minutes < 90) {
+            words = substitute('h', 1);
+        }
+        else if (hours < 24) {
+            words = substitute('hrs', Math.round(hours));
+        }
+        else if (hours < 42) {
+            words = substitute('d', 1);
+        }
+        else if (days < 7) {
+            words = substitute('d', Math.round(days));
+        }
+        else if (weeks < 2) {
+            words = substitute('w', 1);
+        }
+        else if (weeks < 52) {
+            words = substitute('w', Math.round(weeks));
+        }
+        else if (years < 1.5) {
+            words = substitute('y', 1);
+        }
+        else {
+            words = substitute('yrs', Math.round(years));
+        }
+
+
+
+      var separator = $l.wordSeparator || "";
+      if ($l.wordSeparator === undefined) { separator = " "; }
+
+      
+         return $.trim([prefix, words].join(separator));
+
+          },
+
+    parse: function(iso8601) {
+      var s = $.trim(iso8601);
+      s = s.replace(/\.\d+/,""); // remove milliseconds
+      s = s.replace(/-/,"/").replace(/-/,"/");
+      s = s.replace(/T/," ").replace(/Z/," UTC");
+      s = s.replace(/([\+\-]\d\d)\:?(\d\d)/," $1$2"); // -04:00 -> -0400
+      s = s.replace(/([\+\-]\d\d)$/," $100"); // +09 -> +0900
+      return new Date(s);
+    },
+    datetime: function(elem) {
+      var iso8601 = $t.isTime(elem) ? $(elem).attr("datetime") : $(elem).attr("title");
+      return $t.parse(iso8601);
+    },
+    isTime: function(elem) {
+      // jQuery's `is()` doesn't play well with HTML5 in IE
+      return $(elem).get(0).tagName.toLowerCase() === "time"; // $(elem).is("time");
+    }
+  });
+
+  // functions that can be called via $(el).timeago('action')
+  // init is default when no action is given
+  // functions are called with context of a single element
+  var functions = {
+    init: function(){
+      var refresh_el = $.proxy(refresh, this);
+      refresh_el();
+      var $s = $t.settings;
+      if ($s.refreshMillis > 0) {
+        this._timeagoInterval = setInterval(refresh_el, $s.refreshMillis);
+      }
+    },
+    update: function(time){
+      var parsedTime = $t.parse(time);
+      $(this).data('timeago', { datetime: parsedTime });
+      if($t.settings.localeTitle) $(this).attr("title", parsedTime.toLocaleString());
+      refresh.apply(this);
+    },
+    updateFromDOM: function(){
+      $(this).data('timeago', { datetime: $t.parse( $t.isTime(this) ? $(this).attr("datetime") : $(this).attr("title") ) });
+      refresh.apply(this);
+    },
+    dispose: function () {
+      if (this._timeagoInterval) {
+        window.clearInterval(this._timeagoInterval);
+        this._timeagoInterval = null;
+      }
+    }
+  };
+
+  $.fn.timeago = function(action, options) {
+    var fn = action ? functions[action] : functions.init;
+    if(!fn){
+      throw new Error("Unknown function name '"+ action +"' for timeago");
+    }
+    // each over objects here and call the requested function
+    this.each(function(){
+      fn.call(this, options);
+    });
+    return this;
+  };
+
+  function refresh() {
+    var data = prepareData(this);
+    var $s = $t.settings;
+
+    if (!isNaN(data.datetime)) {
+      if ( $s.cutoff == 0 || Math.abs(distance(data.datetime)) < $s.cutoff) {
+        $(this).text(inWords(data.datetime));
+      }
+    }
+    return this;
+  }
+
+  function prepareData(element) {
+    element = $(element);
+    if (!element.data("timeago")) {
+      element.data("timeago", { datetime: $t.datetime(element) });
+      var text = $.trim(element.text());
+      if ($t.settings.localeTitle) {
+        element.attr("title", element.data('timeago').datetime.toLocaleString());
+      } else if (text.length > 0 && !($t.isTime(element) && element.attr("title"))) {
+        element.attr("title", text);
+      }
+    }
+    return element.data("timeago");
+  }
+
+  function inWords(date) {
+    return $t.inWords(distance(date));
+  }
+
+  function distance(date) {
+    return (new Date().getTime() - date.getTime());
+  }
+
+  // fix for IE6 suckage
+  document.createElement("abbr");
+  document.createElement("time");
+}));
+
+
+$(function () {
+  setInterval(function () {
+    
+    if ( $('.ajax-time').length > 0) {
+      $('.ajax-time').timeago()
+        .removeClass('.ajax-time');
+    }
+  },
+  1000);
+});
+</script>      
+				
+*/		</script>
+
+			  
+				
+				
+					</body>
+</html>
